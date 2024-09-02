@@ -24,7 +24,7 @@ defaults to enabled for each Kubernetes component as of v1.27.
 With SLI metrics enabled, each Kubernetes component exposes two metrics,
 labeled per healthcheck:
 
-- a gauge (which represents the current state of the healthcheck)
+- a gage (which represents the current state of the healthcheck)
 - a counter (which records the cumulative counts observed for each healthcheck state)
 
 You can use the metric information to calculate per-component availability statistics.
@@ -32,7 +32,7 @@ For example, the API server checks the health of etcd. You can work out and repo
 available or unavailable etcd has been - as reported by its client, the API server.
 
 
-The prometheus gauge data looks like this:
+The prometheus gage data looks like this:
 
 ```
 # HELP kubernetes_healthcheck [ALPHA] This metric records the result of a single healthcheck.
@@ -71,6 +71,6 @@ kubernetes_healthchecks_total{name="ping",status="success",type="readyz"} 15
 ## Using this data
 
 The component SLIs metrics endpoint is intended to be scraped at a high frequency. Scraping
-at a high frequency means that you end up with greater granularity of the gauge's signal, which
+at a high frequency means that you end up with greater granularity of the gage's signal, which
 can be then used to calculate SLOs. The `/metrics/slis` endpoint provides the raw data necessary
 to calculate an availability SLO for the respective Kubernetes component. 

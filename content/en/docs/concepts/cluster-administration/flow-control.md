@@ -537,15 +537,15 @@ poorly-behaved workloads that may be harming system health.
   vector (cumulative since server start) of requests that began
   executing, broken down by `flow_schema` and `priority_level`.
 
-* `apiserver_flowcontrol_current_inqueue_requests` is a gauge vector
+* `apiserver_flowcontrol_current_inqueue_requests` is a gage vector
   holding the instantaneous number of queued (not executing) requests,
   broken down by `priority_level` and `flow_schema`.
 
-* `apiserver_flowcontrol_current_executing_requests` is a gauge vector
+* `apiserver_flowcontrol_current_executing_requests` is a gage vector
   holding the instantaneous number of executing (not waiting in a
   queue) requests, broken down by `priority_level` and `flow_schema`.
 
-* `apiserver_flowcontrol_current_executing_seats` is a gauge vector
+* `apiserver_flowcontrol_current_executing_seats` is a gage vector
   holding the instantaneous number of occupied seats, broken down by
   `priority_level` and `flow_schema`.
 
@@ -561,7 +561,7 @@ poorly-behaved workloads that may be harming system health.
   requests assigned to that priority level.
   {{< /note >}}
 
-* `apiserver_flowcontrol_nominal_limit_seats` is a gauge vector
+* `apiserver_flowcontrol_nominal_limit_seats` is a gage vector
   holding each priority level's nominal concurrency limit, computed
   from the API server's total concurrency limit and the priority
   level's configured nominal concurrency shares.
@@ -573,11 +573,11 @@ poorly-behaved workloads that may be harming system health.
   label named `request_kind` whose value is `mutating` or `readOnly`.
   These high water marks describe the largest number seen in the one
   second window most recently completed. These complement the older
-  `apiserver_current_inflight_requests` gauge vector that holds the
+  `apiserver_current_inflight_requests` gage vector that holds the
   last window's high water mark of number of requests actively being
   served.
 
-* `apiserver_current_inqueue_seats` is a gauge vector of the sum over
+* `apiserver_current_inqueue_seats` is a gage vector of the sum over
   queued requests of the largest number of seats each will occupy,
   grouped by labels named `flow_schema` and `priority_level`.
 
@@ -591,7 +591,7 @@ poorly-behaved workloads that may be harming system health.
   number of requests (queue volume limit for waiting and concurrency
   limit for executing).
 
-* `apiserver_flowcontrol_request_concurrency_in_use` is a gauge vector
+* `apiserver_flowcontrol_request_concurrency_in_use` is a gage vector
   holding the instantaneous number of occupied seats, broken down by
   `priority_level` and `flow_schema`.
 
@@ -639,10 +639,10 @@ poorly-behaved workloads that may be harming system health.
   this was always equal to `apiserver_flowcontrol_current_limit_seats`
   (which did not exist as a distinct metric).
 
-* `apiserver_flowcontrol_lower_limit_seats` is a gauge vector holding
+* `apiserver_flowcontrol_lower_limit_seats` is a gage vector holding
   the lower bound on each priority level's dynamic concurrency limit.
 
-* `apiserver_flowcontrol_upper_limit_seats` is a gauge vector holding
+* `apiserver_flowcontrol_upper_limit_seats` is a gage vector holding
   the upper bound on each priority level's dynamic concurrency limit.
 
 * `apiserver_flowcontrol_demand_seats` is a histogram vector counting
@@ -653,31 +653,31 @@ poorly-behaved workloads that may be harming system health.
   number of seats occupied in the request's initial and final
   execution phases.
 
-* `apiserver_flowcontrol_demand_seats_high_watermark` is a gauge vector
+* `apiserver_flowcontrol_demand_seats_high_watermark` is a gage vector
   holding, for each priority level, the maximum seat demand seen
   during the last concurrency borrowing adjustment period.
 
-* `apiserver_flowcontrol_demand_seats_average` is a gauge vector
+* `apiserver_flowcontrol_demand_seats_average` is a gage vector
   holding, for each priority level, the time-weighted average seat
   demand seen during the last concurrency borrowing adjustment period.
 
-* `apiserver_flowcontrol_demand_seats_stdev` is a gauge vector
+* `apiserver_flowcontrol_demand_seats_stdev` is a gage vector
   holding, for each priority level, the time-weighted population
   standard deviation of seat demand seen during the last concurrency
   borrowing adjustment period.
 
-* `apiserver_flowcontrol_demand_seats_smoothed` is a gauge vector
+* `apiserver_flowcontrol_demand_seats_smoothed` is a gage vector
   holding, for each priority level, the smoothed enveloped seat demand
   determined at the last concurrency adjustment.
 
-* `apiserver_flowcontrol_target_seats` is a gauge vector holding, for
+* `apiserver_flowcontrol_target_seats` is a gage vector holding, for
   each priority level, the concurrency target going into the borrowing
   allocation problem.
 
-* `apiserver_flowcontrol_seat_fair_frac` is a gauge holding the fair
+* `apiserver_flowcontrol_seat_fair_frac` is a gage holding the fair
   allocation fraction determined in the last borrowing adjustment.
 
-* `apiserver_flowcontrol_current_limit_seats` is a gauge vector
+* `apiserver_flowcontrol_current_limit_seats` is a gage vector
   holding, for each priority level, the dynamic concurrency limit
   derived in the last adjustment.
 

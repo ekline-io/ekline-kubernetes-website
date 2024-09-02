@@ -53,11 +53,11 @@ end
 
 id1 --> tasks --> tasks2
 
-classDef grey fill:#dddddd,stroke:#ffffff,stroke-width:px,color:#000000, font-size:15px;
+classDef gray fill:#dddddd,stroke:#ffffff,stroke-width:px,color:#000000, font-size:15px;
 classDef white fill:#ffffff,stroke:#000,stroke-width:px,color:#000,font-weight:bold
 classDef k8s fill:#326ce5,stroke:#fff,stroke-width:1px,color:#fff;
 classDef spacewhite fill:#ffffff,stroke:#fff,stroke-width:0px,color:#000
-class A,1,2,3,4,5,6,7 grey
+class A,1,2,3,4,5,6,7 gray
 class 0 spacewhite
 class tasks,tasks2 white
 class id1 k8s
@@ -146,11 +146,11 @@ end
 
 2 --> changes --> changes2
 
-classDef grey fill:#dddddd,stroke:#ffffff,stroke-width:px,color:#000000, font-size:15px;
+classDef gray fill:#dddddd,stroke:#ffffff,stroke-width:px,color:#000000, font-size:15px;
 classDef white fill:#ffffff,stroke:#000,stroke-width:px,color:#000,font-weight:bold
 classDef k8s fill:#326ce5,stroke:#fff,stroke-width:1px,color:#fff;
 classDef spacewhite fill:#ffffff,stroke:#fff,stroke-width:0px,color:#000
-class 1,2,3,3a,4,5,6 grey
+class 1,2,3,3a,4,5,6 gray
 class S,T spacewhite
 class changes,changes2 white
 {{</ mermaid >}}
@@ -302,7 +302,7 @@ be useful for debugging.
 
 {{< note >}}
 The commands below use Docker as default container engine. Set the `CONTAINER_ENGINE` environment
-variable to override this behaviour.
+variable to override this behavior.
 {{< /note >}}
 
 1. Build the container image locally  
@@ -383,9 +383,9 @@ end
 
 first --> second
 
-classDef grey fill:#dddddd,stroke:#ffffff,stroke-width:px,color:#000000, font-size:15px;
+classDef gray fill:#dddddd,stroke:#ffffff,stroke-width:px,color:#000000, font-size:15px;
 classDef white fill:#ffffff,stroke:#000,stroke-width:px,color:#000,font-weight:bold
-class 1,2,3,4,5,6,7,8 grey
+class 1,2,3,4,5,6,7,8 gray
 class first,second white
 {{</ mermaid >}}
 

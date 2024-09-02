@@ -126,7 +126,7 @@ to remove this metric dependency before upgrading to `1.14`
 Controller manager metrics provide important insight into the performance and health of the
 controller manager. These metrics include common Go language runtime metrics such as go_routine
 count and controller specific metrics such as etcd request latencies or Cloudprovider (AWS, GCE,
-OpenStack) API latencies that can be used to gauge the health of a cluster.
+OpenStack) API latencies that can be used to gage the health of a cluster.
 
 Starting from Kubernetes 1.7, detailed Cloudprovider metrics are available for storage operations
 for GCE, AWS, Vsphere and OpenStack.
@@ -155,7 +155,7 @@ lack of resources, and compare actual usage to the pod's request.
 
 The kube-scheduler identifies the resource [requests and limits](/docs/concepts/configuration/manage-resources-containers/)
 configured for each Pod; when either a request or limit is non-zero, the kube-scheduler reports a
-metrics timeseries. The time series is labelled by:
+metrics timeseries. The time series is labeled by:
 
 - namespace
 - pod name

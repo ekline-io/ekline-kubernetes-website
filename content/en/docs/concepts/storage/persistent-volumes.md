@@ -508,7 +508,7 @@ Kubernetes does not support shrinking a PVC to less than its current size.
 PersistentVolume types are implemented as plugins. Kubernetes currently supports the following plugins:
 
 * [`csi`](/docs/concepts/storage/volumes/#csi) - Container Storage Interface (CSI)
-* [`fc`](/docs/concepts/storage/volumes/#fc) - Fibre Channel (FC) storage
+* [`fc`](/docs/concepts/storage/volumes/#fc) - Fiber Channel (FC) storage
 * [`hostPath`](/docs/concepts/storage/volumes/#hostpath) - HostPath volume
   (for single node testing only; WILL NOT WORK in a multi-node cluster;
   consider using `local` volume instead)
@@ -958,7 +958,7 @@ The following volume plugins support raw block volumes, including dynamic provis
 applicable:
 
 * CSI
-* FC (Fibre Channel)
+* FC (Fiber Channel)
 * iSCSI
 * Local volume
 * OpenStack Cinder

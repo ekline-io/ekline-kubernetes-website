@@ -281,9 +281,9 @@ spec:
       sizeLimit: 500Mi
 ```
 
-### fc (fibre channel) {#fc}
+### fc (fiber channel) {#fc}
 
-An `fc` volume type allows an existing fibre channel block storage volume
+An `fc` volume type allows an existing fiber channel block storage volume
 to mount in a Pod. You can specify single or multiple target world wide names (WWNs)
 using the parameter `targetWWNs` in your Volume configuration. If multiple WWNs are specified,
 targetWWNs expect that those WWNs are from multi-path connections.
@@ -293,7 +293,7 @@ You must configure FC SAN Zoning to allocate and mask those LUNs (volumes) to th
 beforehand so that Kubernetes hosts can access them.
 {{< /note >}}
 
-See the [fibre channel example](https://github.com/kubernetes/examples/tree/master/staging/volumes/fibre_channel)
+See the [fiber channel example](https://github.com/kubernetes/examples/tree/master/staging/volumes/fibre_channel)
 for more details.
 
 ### gcePersistentDisk (deprecated) {#gcepersistentdisk}

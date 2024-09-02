@@ -35,10 +35,10 @@ flowchart LR
     first ----> second
      
 
-classDef grey fill:#dddddd,stroke:#ffffff,stroke-width:px,color:#000000, font-size:15px;
+classDef gray fill:#dddddd,stroke:#ffffff,stroke-width:px,color:#000000, font-size:15px;
 classDef white fill:#ffffff,stroke:#000,stroke-width:px,color:#000,font-weight:bold
 classDef spacewhite fill:#ffffff,stroke:#fff,stroke-width:0px,color:#000
-class A,B,C,D,E,F,G,H grey
+class A,B,C,D,E,F,G,H gray
 class S,T spacewhite
 class first,second white
 {{</ mermaid >}}

@@ -430,10 +430,10 @@ PersistentVolumeSpec is the specification of a persistent volume.
 
 - **fc** (FCVolumeSource)
 
-  fc represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.
+  fc represents a Fiber Channel resource that is attached to a kubelet's host machine and then exposed to the pod.
 
   <a name="FCVolumeSource"></a>
-  *Represents a Fibre Channel volume. Fibre Channel volumes can only be mounted as read/write once. Fibre Channel volumes support ownership management and SELinux relabeling.*
+  *Represents a Fiber Channel volume. Fiber Channel volumes can only be mounted as read/write once. Fiber Channel volumes support ownership management and SELinux relabeling.*
 
   - **fc.fsType** (string)
 
@@ -843,7 +843,7 @@ PersistentVolumeSpec is the specification of a persistent volume.
 
   - **storageos.volumeNamespace** (string)
 
-    volumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to "default" if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
+    volumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behavior. Set to "default" if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
 
 - **vsphereVolume** (VsphereVirtualDiskVolumeSource)
 

@@ -43,14 +43,14 @@ Stable metrics observe strict API contracts and no labels can be added or remove
 	<div class="metric_help">Maximal number of currently used inflight request limit of this apiserver per request kind in last second.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">STABLE</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">request_kind</span></li></ul>
 	</div><div class="metric" data-stability="stable">
 	<div class="metric_name">apiserver_longrunning_requests</div>
-	<div class="metric_help">Gauge of all active long-running apiserver requests broken out by verb, group, version, resource, scope and component. Not all requests are tracked this way.</div>
+	<div class="metric_help">Gage of all active long-running apiserver requests broken out by verb, group, version, resource, scope and component. Not all requests are tracked this way.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">STABLE</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">component</span><span class="metric_label">group</span><span class="metric_label">resource</span><span class="metric_label">scope</span><span class="metric_label">subresource</span><span class="metric_label">verb</span><span class="metric_label">version</span></li></ul>
 	</div><div class="metric" data-stability="stable">
 	<div class="metric_name">apiserver_request_duration_seconds</div>
@@ -68,10 +68,10 @@ Stable metrics observe strict API contracts and no labels can be added or remove
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">code</span><span class="metric_label">component</span><span class="metric_label">dry_run</span><span class="metric_label">group</span><span class="metric_label">resource</span><span class="metric_label">scope</span><span class="metric_label">subresource</span><span class="metric_label">verb</span><span class="metric_label">version</span></li></ul>
 	</div><div class="metric" data-stability="stable">
 	<div class="metric_name">apiserver_requested_deprecated_apis</div>
-	<div class="metric_help">Gauge of deprecated APIs that have been requested, broken out by API group, version, resource, subresource, and removed_release.</div>
+	<div class="metric_help">Gage of deprecated APIs that have been requested, broken out by API group, version, resource, subresource, and removed_release.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">STABLE</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">group</span><span class="metric_label">removed_release</span><span class="metric_label">resource</span><span class="metric_label">subresource</span><span class="metric_label">version</span></li></ul>
 	</div><div class="metric" data-stability="stable">
 	<div class="metric_name">apiserver_response_sizes</div>
@@ -85,7 +85,7 @@ Stable metrics observe strict API contracts and no labels can be added or remove
 	<div class="metric_help">Number of stored objects at the time of last check split by kind. In case of a fetching error, the value will be -1.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">STABLE</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">resource</span></li></ul>
 	</div><div class="metric" data-stability="stable">
 	<div class="metric_name">apiserver_storage_size_bytes</div>
@@ -169,7 +169,7 @@ Stable metrics observe strict API contracts and no labels can be added or remove
 	<div class="metric_help">This metric records the result of a single healthcheck.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">STABLE</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">name</span><span class="metric_label">type</span></li></ul>
 	</div><div class="metric" data-stability="stable">
 	<div class="metric_name">kubernetes_healthchecks_total</div>
@@ -232,7 +232,7 @@ Stable metrics observe strict API contracts and no labels can be added or remove
 	<div class="metric_help">Number of pending pods, by the queue type. 'active' means number of pods in activeQ; 'backoff' means number of pods in backoffQ; 'unschedulable' means number of pods in unschedulablePods that the scheduler attempted to schedule and failed; 'gated' is the number of unschedulable pods that the scheduler never attempted to schedule because they are gated.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">STABLE</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">queue</span></li></ul>
 	</div><div class="metric" data-stability="stable">
 	<div class="metric_name">scheduler_pod_scheduling_attempts</div>
@@ -295,21 +295,21 @@ Beta metrics observe a looser API contract than its stable counterparts. No labe
 	<div class="metric_help">Number of requests in initial (for a WATCH) or any (for a non-WATCH) execution stage in the API Priority and Fairness subsystem</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">BETA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">flow_schema</span><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="beta">
 	<div class="metric_name">apiserver_flowcontrol_current_executing_seats</div>
 	<div class="metric_help">Concurrency (number of seats) occupied by the currently executing (initial stage for a WATCH, any stage otherwise) requests in the API Priority and Fairness subsystem</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">BETA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">flow_schema</span><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="beta">
 	<div class="metric_name">apiserver_flowcontrol_current_inqueue_requests</div>
 	<div class="metric_help">Number of requests currently pending in queues of the API Priority and Fairness subsystem</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">BETA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">flow_schema</span><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="beta">
 	<div class="metric_name">apiserver_flowcontrol_dispatched_requests_total</div>
@@ -323,7 +323,7 @@ Beta metrics observe a looser API contract than its stable counterparts. No labe
 	<div class="metric_help">Nominal number of execution seats configured for each priority level</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">BETA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="beta">
 	<div class="metric_name">apiserver_flowcontrol_rejected_requests_total</div>
@@ -358,7 +358,7 @@ Beta metrics observe a looser API contract than its stable counterparts. No labe
 	<div class="metric_help">This metric records the data about the stage and enablement of a k8s feature.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">BETA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">name</span><span class="metric_label">stage</span></li></ul>
 	</div><div class="metric" data-stability="beta">
 	<div class="metric_name">registered_metrics_total</div>
@@ -397,14 +397,14 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">apiservice</span><span class="metric_label">reason</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">aggregator_openapi_v2_regeneration_duration</div>
-	<div class="metric_help">Gauge of OpenAPI v2 spec regeneration duration in seconds.</div>
+	<div class="metric_help">Gage of OpenAPI v2 spec regeneration duration in seconds.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">reason</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">aggregator_unavailable_apiservice</div>
-	<div class="metric_help">Gauge of APIServices which are marked as unavailable broken down by APIService name.</div>
+	<div class="metric_help">Gage of APIServices which are marked as unavailable broken down by APIService name.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
 	<li data-type="custom"><label class="metric_detail">Type:</label> <span class="metric_type">Custom</span></li>
@@ -519,7 +519,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Timestamp of the last automatic reload of authentication configuration split by status and apiserver identity.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">apiserver_id_hash</span><span class="metric_label">status</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_authentication_config_controller_automatic_reloads_total</div>
@@ -540,7 +540,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Timestamp of the last automatic reload of authorization configuration split by status and apiserver identity.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">apiserver_id_hash</span><span class="metric_label">status</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_authorization_config_controller_automatic_reloads_total</div>
@@ -694,7 +694,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Maximal number of queued requests in this apiserver per request kind in last second.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">request_kind</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_delegated_authn_request_duration_seconds</div>
@@ -757,7 +757,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Timestamp of the last successful or failed automatic reload of encryption configuration split by apiserver identity.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">apiserver_id_hash</span><span class="metric_label">status</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_encryption_config_controller_automatic_reload_success_total</div>
@@ -778,7 +778,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Percent of the cache slots currently occupied by cached DEKs.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_envelope_encryption_dek_cache_inter_arrival_time_seconds</div>
@@ -792,7 +792,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of records in data encryption key (DEK) source cache. On a restart, this value is an approximation of the number of decrypt RPC calls the server will make to the KMS plugin.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">provider_name</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_envelope_encryption_invalid_key_id_from_status_total</div>
@@ -806,14 +806,14 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">The last time in seconds when a keyID was used.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">apiserver_id_hash</span><span class="metric_label">key_id_hash</span><span class="metric_label">provider_name</span><span class="metric_label">transformation_type</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_envelope_encryption_key_id_hash_status_last_timestamp_seconds</div>
 	<div class="metric_help">The last time in seconds when a keyID was returned by the Status RPC call.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">apiserver_id_hash</span><span class="metric_label">key_id_hash</span><span class="metric_label">provider_name</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_envelope_encryption_key_id_hash_total</div>
@@ -834,21 +834,21 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of seats currently pending in queues of the API Priority and Fairness subsystem</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">flow_schema</span><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_current_limit_seats</div>
 	<div class="metric_help">current derived number of execution seats available to each priority level</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_current_r</div>
 	<div class="metric_help">R(time of last change)</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_demand_seats</div>
@@ -862,35 +862,35 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Time-weighted average, over last adjustment period, of demand_seats</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_demand_seats_high_watermark</div>
 	<div class="metric_help">High watermark, over last adjustment period, of demand_seats</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_demand_seats_smoothed</div>
 	<div class="metric_help">Smoothed seat demands</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_demand_seats_stdev</div>
 	<div class="metric_help">Time-weighted standard deviation, over last adjustment period, of demand_seats</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_dispatch_r</div>
 	<div class="metric_help">R(time of last dispatch)</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_epoch_advance_total</div>
@@ -904,28 +904,28 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">S(most recently dispatched request)</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_lower_limit_seats</div>
 	<div class="metric_help">Configured lower bound on number of execution seats available to each priority level</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_next_discounted_s_bounds</div>
 	<div class="metric_help">min and max, over queues, of S(oldest waiting request in queue) - estimated work in progress</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">bound</span><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_next_s_bounds</div>
 	<div class="metric_help">min and max, over queues, of S(oldest waiting request in queue)</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">bound</span><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_priority_level_request_utilization</div>
@@ -953,14 +953,14 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Concurrency (number of seats) occupied by the currently executing (initial stage for a WATCH, any stage otherwise) requests in the API Priority and Fairness subsystem</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">flow_schema</span><span class="metric_label">priority_level</span></li><li class="metric_deprecated_version"><label class="metric_detail">Deprecated Versions:</label><span>1.31.0</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_request_concurrency_limit</div>
 	<div class="metric_help">Nominal number of execution seats configured for each priority level</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">priority_level</span></li><li class="metric_deprecated_version"><label class="metric_detail">Deprecated Versions:</label><span>1.30.0</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_request_dispatch_no_accommodation_total</div>
@@ -988,21 +988,21 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Fair fraction of server's concurrency to allocate to each priority level that can use it</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_target_seats</div>
 	<div class="metric_help">Seat allocation targets</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_upper_limit_seats</div>
 	<div class="metric_help">Configured upper bound on number of execution seats available to each priority level</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_flowcontrol_watch_count_samples</div>
@@ -1142,7 +1142,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Total size of the storage database file physically allocated in bytes.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">endpoint</span></li><li class="metric_deprecated_version"><label class="metric_detail">Deprecated Versions:</label><span>1.28.0</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_storage_decode_errors_total</div>
@@ -1352,7 +1352,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help"></div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">status</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">authentication_token_cache_fetch_total</div>
@@ -1443,7 +1443,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of EndpointSlices that would exist with perfect endpoint allocation</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">endpoint_slice_controller_endpoints_added_per_sync</div>
@@ -1457,7 +1457,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of endpoints desired</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">endpoint_slice_controller_endpoints_removed_per_sync</div>
@@ -1478,14 +1478,14 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of EndpointSlices</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">endpoint_slice_controller_services_count_by_traffic_distribution</div>
 	<div class="metric_help">Number of Services using some specific trafficDistribution</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">traffic_distribution</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">endpoint_slice_controller_syncs</div>
@@ -1513,7 +1513,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of EndpointSlices that would exist with perfect endpoint allocation</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">endpoint_slice_mirroring_controller_endpoints_added_per_sync</div>
@@ -1527,7 +1527,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of endpoints desired</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">endpoint_slice_mirroring_controller_endpoints_removed_per_sync</div>
@@ -1555,7 +1555,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of EndpointSlices</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">ephemeral_volume_controller_create_failures_total</div>
@@ -1576,7 +1576,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of etcd bookmarks (progress notify events) split by kind.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">resource</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">etcd_lease_object_counts</div>
@@ -1611,7 +1611,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Etcd server's binary version</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">binary_version</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">field_validation_request_duration_seconds</div>
@@ -1692,7 +1692,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">backoffLimit</span><span class="metric_label">status</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">job_controller_job_pods_creation_total</div>
-	<div class="metric_help">`The number of Pods created by the Job controller labelled with a reason for the Pod creation., This metric also distinguishes between Pods created using different PodReplacementPolicy settings., Possible values of the "reason" label are:, "new", "recreate_terminating_or_failed", "recreate_failed"., Possible values of the "status" label are:, "succeeded", "failed".`</div>
+	<div class="metric_help">`The number of Pods created by the Job controller labeled with a reason for the Pod creation., This metric also distinguishes between Pods created using different PodReplacementPolicy settings., Possible values of the "reason" label are:, "new", "recreate_terminating_or_failed", "recreate_failed"., Possible values of the "status" label are:, "succeeded", "failed".`</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
 	<li data-type="counter"><label class="metric_detail">Type:</label> <span class="metric_type">Counter</span></li>
@@ -1720,10 +1720,10 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">event</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kube_apiserver_clusterip_allocator_allocated_ips</div>
-	<div class="metric_help">Gauge measuring the number of allocated IPs for Services</div>
+	<div class="metric_help">Gage measuring the number of allocated IPs for Services</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">cidr</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kube_apiserver_clusterip_allocator_allocation_errors_total</div>
@@ -1741,17 +1741,17 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">cidr</span><span class="metric_label">scope</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kube_apiserver_clusterip_allocator_available_ips</div>
-	<div class="metric_help">Gauge measuring the number of available IPs for Services</div>
+	<div class="metric_help">Gage measuring the number of available IPs for Services</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">cidr</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kube_apiserver_nodeport_allocator_allocated_ports</div>
-	<div class="metric_help">Gauge measuring the number of allocated NodePorts for Services</div>
+	<div class="metric_help">Gage measuring the number of allocated NodePorts for Services</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kube_apiserver_nodeport_allocator_allocation_errors_total</div>
@@ -1769,10 +1769,10 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">scope</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kube_apiserver_nodeport_allocator_available_ports</div>
-	<div class="metric_help">Gauge measuring the number of available NodePorts for Services</div>
+	<div class="metric_help">Gage measuring the number of available NodePorts for Services</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kube_apiserver_pod_logs_backend_tls_failure_total</div>
@@ -1807,7 +1807,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">The number of pods the kubelet considers active and which are being considered when admitting new pods. static is true if the pod is not from the apiserver.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">static</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_certificate_manager_client_expiration_renew_errors</div>
@@ -1818,10 +1818,10 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_certificate_manager_client_ttl_seconds</div>
-	<div class="metric_help">Gauge of the TTL (time-to-live) of the Kubelet's client certificate. The value is in seconds until certificate expiry (negative if already expired). If client certificate is invalid or unused, the value will be +INF.</div>
+	<div class="metric_help">Gage of the TTL (time-to-live) of the Kubelet's client certificate. The value is in seconds until certificate expiry (negative if already expired). If client certificate is invalid or unused, the value will be +INF.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_certificate_manager_server_rotation_seconds</div>
@@ -1832,10 +1832,10 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_certificate_manager_server_ttl_seconds</div>
-	<div class="metric_help">Gauge of the shortest TTL (time-to-live) of the Kubelet's serving certificate. The value is in seconds until certificate expiry (negative if already expired). If serving certificate is invalid or unused, the value will be +INF.</div>
+	<div class="metric_help">Gage of the shortest TTL (time-to-live) of the Kubelet's serving certificate. The value is in seconds until certificate expiry (negative if already expired). If serving certificate is invalid or unused, the value will be +INF.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_cgroup_manager_duration_seconds</div>
@@ -1891,7 +1891,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">The number of pods the kubelet is being instructed to run. static is true if the pod is not from the apiserver.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">static</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_device_plugin_alloc_duration_seconds</div>
@@ -1947,21 +1947,21 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Last graceful shutdown start time since unix epoch in seconds</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_graceful_shutdown_start_time_seconds</div>
 	<div class="metric_help">Last graceful shutdown start time since unix epoch in seconds</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_http_inflight_requests</div>
 	<div class="metric_help">Number of the inflight http requests</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">long_running</span><span class="metric_label">method</span><span class="metric_label">path</span><span class="metric_label">server_type</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_http_requests_duration_seconds</div>
@@ -2003,7 +2003,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Current number of ephemeral containers in pods managed by this kubelet.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_memory_manager_pinning_errors_total</div>
@@ -2024,63 +2024,63 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">The number of mirror pods the kubelet will try to create (one per admitted static pod)</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_node_name</div>
 	<div class="metric_help">The node's name. The count is always 1.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">node</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_node_startup_duration_seconds</div>
 	<div class="metric_help">Duration in seconds of node startup in total.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_node_startup_post_registration_duration_seconds</div>
 	<div class="metric_help">Duration in seconds of node startup after registration.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_node_startup_pre_kubelet_duration_seconds</div>
 	<div class="metric_help">Duration in seconds of node startup before kubelet starts.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_node_startup_pre_registration_duration_seconds</div>
 	<div class="metric_help">Duration in seconds of node startup before registration.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_node_startup_registration_duration_seconds</div>
 	<div class="metric_help">Duration in seconds of node startup during registration.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_orphan_pod_cleaned_volumes</div>
 	<div class="metric_help">The total number of orphaned Pods whose volumes were cleaned in the last periodic sweep.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_orphan_pod_cleaned_volumes_errors</div>
 	<div class="metric_help">The number of orphaned Pods whose volumes failed to be cleaned in the last periodic sweep.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_orphaned_runtime_pods_total</div>
@@ -2101,7 +2101,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Timestamp in seconds when PLEG was last seen active.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_pleg_relist_duration_seconds</div>
@@ -2241,14 +2241,14 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of containers currently running</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">container_state</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_running_pods</div>
 	<div class="metric_help">Number of pods that have a running pod sandbox</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_runtime_operations_duration_seconds</div>
@@ -2409,7 +2409,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of pods the kubelet is actually running, broken down by lifecycle phase, whether the pod is desired, orphaned, or runtime only (also orphaned), and whether the pod is static. An orphaned pod has been removed from local configuration or force deleted in the API and consumes resources that are not otherwise visible.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">config</span><span class="metric_label">lifecycle</span><span class="metric_label">static</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubeproxy_network_programming_duration_seconds</div>
@@ -2458,7 +2458,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Pending proxy rules Endpoint changes</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubeproxy_sync_proxy_rules_endpoint_changes_total</div>
@@ -2472,7 +2472,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of iptables rules written by kube-proxy in last sync</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">table</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubeproxy_sync_proxy_rules_iptables_partial_restore_failures_total</div>
@@ -2493,35 +2493,35 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Total number of iptables rules owned by kube-proxy</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">table</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubeproxy_sync_proxy_rules_last_queued_timestamp_seconds</div>
 	<div class="metric_help">The last time a sync of proxy rules was queued</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubeproxy_sync_proxy_rules_last_timestamp_seconds</div>
 	<div class="metric_help">The last time proxy rules were successfully synced</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubeproxy_sync_proxy_rules_no_local_endpoints_total</div>
 	<div class="metric_help">Number of services with a Local traffic policy and no endpoints</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">traffic_policy</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubeproxy_sync_proxy_rules_service_changes_pending</div>
 	<div class="metric_help">Pending proxy rules Service changes</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubeproxy_sync_proxy_rules_service_changes_total</div>
@@ -2535,14 +2535,14 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">A metric with a constant '1' value labeled by major, minor, git version, git commit, git tree state, build date, Go version, and compiler from which Kubernetes was built, and platform on which it is running.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">build_date</span><span class="metric_label">compiler</span><span class="metric_label">git_commit</span><span class="metric_label">git_tree_state</span><span class="metric_label">git_version</span><span class="metric_label">go_version</span><span class="metric_label">major</span><span class="metric_label">minor</span><span class="metric_label">platform</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">leader_election_master_status</div>
-	<div class="metric_help">Gauge of if the reporting system is master of the relevant lease, 0 indicates backup, 1 indicates master. 'name' is the string used to identify the lease. Please make sure to group by name.</div>
+	<div class="metric_help">Gage of if the reporting system is primary of the relevant lease, 0 indicates backup, 1 indicates primary. 'name' is the string used to identify the lease. Please make sure to group by name.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">name</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">leader_election_slowpath_total</div>
@@ -2560,10 +2560,10 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">operation</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">node_collector_unhealthy_nodes_in_zone</div>
-	<div class="metric_help">Gauge measuring number of not Ready Nodes per zones.</div>
+	<div class="metric_help">Gage measuring number of not Ready Nodes per zones.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">zone</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">node_collector_update_all_nodes_health_duration_seconds</div>
@@ -2581,17 +2581,17 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">node_collector_zone_health</div>
-	<div class="metric_help">Gauge measuring percentage of healthy nodes per zone.</div>
+	<div class="metric_help">Gage measuring percentage of functional nodes per zone.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">zone</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">node_collector_zone_size</div>
-	<div class="metric_help">Gauge measuring number of registered Nodes per zones.</div>
+	<div class="metric_help">Gage measuring number of registered Nodes per zones.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">zone</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">node_controller_cloud_provider_taint_removal_delay_seconds</div>
@@ -2630,17 +2630,17 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">clusterCIDR</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">node_ipam_controller_cidrset_usage_cidrs</div>
-	<div class="metric_help">Gauge measuring percentage of allocated CIDRs.</div>
+	<div class="metric_help">Gage measuring percentage of allocated CIDRs.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">clusterCIDR</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">node_ipam_controller_cirdset_max_cidrs</div>
 	<div class="metric_help">Maximum number of CIDRs that can be allocated.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">clusterCIDR</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">node_swap_usage_bytes</div>
@@ -2654,7 +2654,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of L4 ILBs</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">feature</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">plugin_manager_total_plugins</div>
@@ -2721,35 +2721,35 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">container</span><span class="metric_label">namespace</span><span class="metric_label">pod</span><span class="metric_label">pod_uid</span><span class="metric_label">probe_type</span><span class="metric_label">result</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">pv_collector_bound_pv_count</div>
-	<div class="metric_help">Gauge measuring number of persistent volume currently bound</div>
+	<div class="metric_help">Gage measuring number of persistent volume currently bound</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
 	<li data-type="custom"><label class="metric_detail">Type:</label> <span class="metric_type">Custom</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">storage_class</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">pv_collector_bound_pvc_count</div>
-	<div class="metric_help">Gauge measuring number of persistent volume claim currently bound</div>
+	<div class="metric_help">Gage measuring number of persistent volume claim currently bound</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
 	<li data-type="custom"><label class="metric_detail">Type:</label> <span class="metric_type">Custom</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">namespace</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">pv_collector_total_pv_count</div>
-	<div class="metric_help">Gauge measuring total number of persistent volumes</div>
+	<div class="metric_help">Gage measuring total number of persistent volumes</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
 	<li data-type="custom"><label class="metric_detail">Type:</label> <span class="metric_type">Custom</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">plugin_name</span><span class="metric_label">volume_mode</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">pv_collector_unbound_pv_count</div>
-	<div class="metric_help">Gauge measuring number of persistent volume currently unbound</div>
+	<div class="metric_help">Gage measuring number of persistent volume currently unbound</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
 	<li data-type="custom"><label class="metric_detail">Type:</label> <span class="metric_type">Custom</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">storage_class</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">pv_collector_unbound_pvc_count</div>
-	<div class="metric_help">Gauge measuring number of persistent volume claim currently unbound</div>
+	<div class="metric_help">Gage measuring number of persistent volume claim currently unbound</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
 	<li data-type="custom"><label class="metric_detail">Type:</label> <span class="metric_type">Custom</span></li>
@@ -2812,10 +2812,10 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">rest_client_exec_plugin_ttl_seconds</div>
-	<div class="metric_help">Gauge of the shortest TTL (time-to-live) of the client certificate(s) managed by the auth exec plugin. The value is in seconds until certificate expiry (negative if already expired). If auth exec plugins are unused or manage no TLS certificates, the value will be +INF.</div>
+	<div class="metric_help">Gage of the shortest TTL (time-to-live) of the client certificate(s) managed by the auth exec plugin. The value is in seconds until certificate expiry (negative if already expired). If auth exec plugins are unused or manage no TLS certificates, the value will be +INF.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">rest_client_rate_limiter_duration_seconds</div>
@@ -2864,7 +2864,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of transport entries in the internal cache.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">rest_client_transport_create_calls_total</div>
@@ -2906,14 +2906,14 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Indicates where instances of a controller are currently running</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">manager</span><span class="metric_label">name</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">scheduler_goroutines</div>
 	<div class="metric_help">Number of running goroutines split by the work they do such as binding.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">operation</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">scheduler_permit_wait_duration_seconds</div>
@@ -2941,7 +2941,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of nodes, pods, and assumed (bound) pods in the scheduler cache.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">type</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">scheduler_scheduling_algorithm_duration_seconds</div>
@@ -2952,10 +2952,10 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">scheduler_unschedulable_pods</div>
-	<div class="metric_help">The number of unschedulable pods broken down by plugin name. A pod will increment the gauge for all plugins that caused it to not schedule and so this metric have meaning only when broken down by plugin.</div>
+	<div class="metric_help">The number of unschedulable pods broken down by plugin name. A pod will increment the gage for all plugins that caused it to not schedule and so this metric have meaning only when broken down by plugin.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">plugin</span><span class="metric_label">profile</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">scheduler_volume_binder_cache_requests_total</div>
@@ -3088,49 +3088,49 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Number of errors when kubelet cannot compute SELinux context for a container. Kubelet can't start such a Pod then and it will retry, therefore value of this metric may not represent the actual nr. of containers.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">access_mode</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">volume_manager_selinux_container_warnings_total</div>
 	<div class="metric_help">Number of errors when kubelet cannot compute SELinux context for a container that are ignored. They will become real errors when SELinuxMountReadWriteOncePod feature is expanded to all volume access modes.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">access_mode</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">volume_manager_selinux_pod_context_mismatch_errors_total</div>
 	<div class="metric_help">Number of errors when a Pod defines different SELinux contexts for its containers that use the same volume. Kubelet can't start such a Pod then and it will retry, therefore value of this metric may not represent the actual nr. of Pods.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">access_mode</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">volume_manager_selinux_pod_context_mismatch_warnings_total</div>
 	<div class="metric_help">Number of errors when a Pod defines different SELinux contexts for its containers that use the same volume. They are not errors yet, but they will become real errors when SELinuxMountReadWriteOncePod feature is expanded to all volume access modes.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">access_mode</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">volume_manager_selinux_volume_context_mismatch_errors_total</div>
 	<div class="metric_help">Number of errors when a Pod uses a volume that is already mounted with a different SELinux context than the Pod needs. Kubelet can't start such a Pod then and it will retry, therefore value of this metric may not represent the actual nr. of Pods.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">access_mode</span><span class="metric_label">volume_plugin</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">volume_manager_selinux_volume_context_mismatch_warnings_total</div>
 	<div class="metric_help">Number of errors when a Pod uses a volume that is already mounted with a different SELinux context than the Pod needs. They are not errors yet, but they will become real errors when SELinuxMountReadWriteOncePod feature is expanded to all volume access modes.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">access_mode</span><span class="metric_label">volume_plugin</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">volume_manager_selinux_volumes_admitted_total</div>
 	<div class="metric_help">Number of volumes whose SELinux context was fine and will be mounted with mount -o context option.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">access_mode</span><span class="metric_label">volume_plugin</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">volume_manager_total_volumes</div>
@@ -3158,7 +3158,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Total capacity of watch cache broken by resource type.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">resource</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">watch_cache_capacity_decrease_total</div>
@@ -3186,14 +3186,14 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">Current depth of workqueue</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">name</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">workqueue_longest_running_processor_seconds</div>
 	<div class="metric_help">How many seconds has the longest running processor for workqueue been running.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">name</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">workqueue_queue_duration_seconds</div>
@@ -3214,7 +3214,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<div class="metric_help">How many seconds of work has done that is in progress and hasn't been observed by work_duration. Large values indicate stuck threads. One can deduce the number of stuck threads by observing the rate at which this increases.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
-	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
+	<li data-type="gage"><label class="metric_detail">Type:</label> <span class="metric_type">Gage</span></li>
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">name</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">workqueue_work_duration_seconds</div>
